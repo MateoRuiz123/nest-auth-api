@@ -18,9 +18,9 @@ import { UsersModule } from './users/users.module';
       entities: [User],
       synchronize: true, // Sólo para desarrollo; en producción se recomienda migraciones
     }),
+    UsersModule,
+    AuthModule,
   ],
-  UsersModule,
-  AuthModule,
   controllers: [AppController],
   providers: [AppService],
 })
