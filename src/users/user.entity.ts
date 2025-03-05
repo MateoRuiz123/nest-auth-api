@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Task } from 'src/tasks/task.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 /**
  * Representa la entidad de usuario en la base de datos.
@@ -22,4 +23,7 @@ export class User {
    */
   @Column() //* Esto es la contraseña del usuario para autenticación.
   password: string;
+
+  @OneToMany(() => Task, task => task.user)
+  tasks: Task[];
 }
