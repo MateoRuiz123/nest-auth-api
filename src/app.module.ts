@@ -12,10 +12,10 @@ import { Task } from './tasks/task.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost', // Cambia si es necesario
-      port: 5432, // Puerto por defecto de Postgres
-      username: 'postgres', // Tu usuario de Postgres
-      password: '14122004', // Tu password de Postgres
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: '14122004',
       database: 'nestauth', // Nombre de la BD (asegúrate de que exista o usa synchronize)
       entities: [User, Task],
       synchronize: true, // Sólo para desarrollo; en producción se recomienda migraciones
