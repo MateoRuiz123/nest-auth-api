@@ -24,6 +24,6 @@ export class User {
   @Column() //* Esto es la contraseña del usuario para autenticación.
   password: string;
 
-  @OneToMany(() => Task, task => task.user)
+  @OneToMany(() => Task, (task) => task.user)
   tasks: Task[];
 }
